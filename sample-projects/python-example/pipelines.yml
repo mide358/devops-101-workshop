@@ -2,7 +2,7 @@ resources:
   - name: myGitRepo
     type: GitRepo
     configuration:
-      gitProvider: my_github
+      gitProvider: git
       path: batelt/devops-101-workshop
       branches:
         include: master
@@ -76,7 +76,7 @@ pipelines:
             - name: step_3
             - name: step_4  
           integrations:
-            - name: my_github            
+            - name: git            
         execution:
           onExecute:
-            - 'curl -H "Authorization: token ${int_my_github_token}" ${int_my_github_url}/rate_limit'
+            - 'curl -H "Authorization: token ${int_git_token}" ${int_git_url}/rate_limit'
