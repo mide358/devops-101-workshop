@@ -1,9 +1,9 @@
-resources:
+3resources:
   - name: myGitRepo
     type: GitRepo
     configuration:
       gitProvider: git
-      path: batelt/devops-101-workshop
+      path: mide358/devops-101-workshop
       branches:
         include: master
   - name: myBuildInfo
